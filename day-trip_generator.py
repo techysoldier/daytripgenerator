@@ -21,10 +21,11 @@
 
 #Creating a list 
 # current issues :finishing out transaction ie.  As a user, I want to display my completed trip in the console.
-# currently running up until like 127 anything put after does not function
+# currently running up until like 128 anything put after does not function
 
 #  destination section
 
+from ast import Return
 import random
 
 
@@ -86,7 +87,7 @@ def select_random_trip_transportation(rides):
     return chosen_random_transportation
 
 
-choices_objectd = select_random_trip_transportation(trip_transportation)
+choices_objectc = select_random_trip_transportation(trip_transportation)
 
 print("Do you like your chosen transportation?")
 answer = input('') 
@@ -112,7 +113,7 @@ def select_random_entertainment(things_to_do):
     print(chosen_random_entertainment)
     return chosen_random_entertainment
 
-choices_objectc = select_random_entertainment(trip_entertainment)
+choices_objectd = select_random_entertainment(trip_entertainment)
 
 
 print("Do you like your chosen entertainment?")
@@ -128,4 +129,20 @@ else:
     print('Congratulations your trip is booked lets confirm the details')
 
 
-    
+choices_objecta = select_random_trip_destination
+choices_objectb = select_random_trip_resturant
+choices_objectc = select_random_trip_transportation
+choices_objectd = select_random_entertainment
+
+def finalize_trip():
+    print('Here is your current itinerary')
+    print(select_random_trip_destination)
+    print(select_random_trip_resturant)
+    print(select_random_trip_transportation)
+    print(select_random_entertainment)   
+    print('Do you have any objections?')
+answer = input('Y or N')
+while answer == 'N':
+    Return 
+while answer == 'Y':
+    print('Thank you for using the trip generator. Please enjoy your trip!')

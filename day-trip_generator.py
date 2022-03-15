@@ -140,7 +140,8 @@ def finalize_trip():
     print(select_random_trip_resturant)
     print(select_random_trip_transportation)
     print(select_random_entertainment)   
-    print('Do you have any objections?')
+
+print('Do you have any objections?')
 answer = input('Y or N')
 while answer == 'N':
     Return 

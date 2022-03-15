@@ -20,9 +20,8 @@
 
 
 #Creating a list 
-# current issues : double printing of destinations, restaurants, mode of transportation, and entertainments
-#how to gather all selections to print to console as a itenirary 
-#do all functions have a single function?
+# current issues :finishing out transaction ie.  As a user, I want to display my completed trip in the console.
+# currently running up until like 127 anything put after does not function
 
 #  destination section
 
@@ -36,7 +35,7 @@ def select_random_trip_destination(daytrips):
     chosen_random_destination = random.choice(daytrips)
     print(chosen_random_destination) 
     return chosen_random_destination
-select_random_trip_destination(trip_destinations)
+choices_objecta = select_random_trip_destination(trip_destinations)
 
 
 
@@ -53,7 +52,6 @@ if answer == 'Y':
 #resturant section
 
 
-import random
 trip_resturants = ['Lisa', 'Ginos', 'Bella','Strasse']
 def select_random_trip_resturant(foods):
      #index 0  index 1  index 2 index 3
@@ -61,7 +59,7 @@ def select_random_trip_resturant(foods):
     print(chosen_random_resturant) 
     return chosen_random_resturant
 
-select_random_trip_resturant(trip_resturants)
+choices_objectb = select_random_trip_resturant(trip_resturants)
 
 print("Do you like your chosen destination?")
 answer = input('') 
@@ -78,7 +76,6 @@ else:
 
 #transportation section
 
-import random
 
 trip_transportation = ['Train', 'Car', 'Limo','Lyft']
 
@@ -89,9 +86,9 @@ def select_random_trip_transportation(rides):
     return chosen_random_transportation
 
 
-select_random_trip_transportation(trip_transportation)
+choices_objectd = select_random_trip_transportation(trip_transportation)
 
-print("Do you like your chosen destination?")
+print("Do you like your chosen transportation?")
 answer = input('') 
 while answer == 'N':
     print ('Sorry to hear your random selection wasnt to your liking')
@@ -106,7 +103,6 @@ else:
 
 #entertainment section
 
-import random
 
 trip_entertainment = ['Opera', 'Tours', 'Museums', 'Concert']
 
@@ -116,10 +112,10 @@ def select_random_entertainment(things_to_do):
     print(chosen_random_entertainment)
     return chosen_random_entertainment
 
-select_random_entertainment(trip_entertainment)
+choices_objectc = select_random_entertainment(trip_entertainment)
 
 
-print("Do you like your chosen destination?")
+print("Do you like your chosen entertainment?")
 answer = input('') 
 while answer == 'N':
     print ('Sorry to hear your random selection wasnt to your liking')
@@ -132,18 +128,4 @@ else:
     print('Congratulations your trip is booked lets confirm the details')
 
 
-
-# #finalize 
-
-# def finalize_transaction(choices_object):
-#     choices_object = {
-#         'destination': chosen_random_destination,
-#         'transportation': chosen_random_transportation,
-#         'restaurant': chosen_random_resturant,
-#         'entertainment': chosen_random_entertainment
-#     }
-
-# finalize_transaction(choices_object)
-
-# print('Time to prepare for your trip. Here are the details, You will be headed to (chosen_random_destination') 
-# ('by (chosen_random_transportation), where you will be attending (chosen_random_entertainment) and dining at (chosen_random_resturant)')
+    
